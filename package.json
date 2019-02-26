@@ -1,7 +1,7 @@
 {
-  "name": "authentication",
+  "name": "test-restoration-authentication",
   "version": "1.0.0",
-  "description": "Test authentication part of the restoration Web application",
+  "description": "Test authentication API of the restoration Web application",
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
@@ -12,6 +12,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BeguinMattis/Test-restoration-authentication.git"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
