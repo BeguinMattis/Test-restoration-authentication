@@ -1,0 +1,23 @@
+sudo: false
+language: node_js
+node_js:
+  - "10"
+branches:
+  only:
+    - master
+    - dev
+install:
+  - npm install
+cache:
+  directories:
+    - "/node_modules"
+script:
+  - npm run test
+deploy:
+  provider: heroku
+  api_key:
+    secure: EbMpzxhmSYpnJB2OcbfEPs3ah02nYg35N/9olnZ/Z1GNhu//HZ3+8djwVnnfuT6aEvmwa6mXj4a1vKlMVUMYzwF+i4Od7dhG+OH+4mGj9Nz4q5JXCNRj63CJJEBlD6UCF/heKbYAy2gsz3vAySc7n1H0syXHxN6oLAJEqcVDcaXC0hxScGB65iL3G+GIXQ5km9AZ9eUpDVziAlfquHC1VFj/6bU/I+0h0mVAFxYATg5RRcnIVvChOGgHsp1hinMvAoiEls1At3+jMxqb8fJlRkvEG3vQnPJpOar55ci4iHCZBKqjaTtgQf837WzHxLJdnqiAI5vqjuVD1ddzxnRsNPEenw6DrMw67z4Oflo3doc5Xb9CIz0ZC9A9PRbFBztRFxOtDXwODvFdsO4TVegilZ8HxC9pyHW7W16dxfxiPEFRrWEmOTFjgiLH7CHlk9vY9sZrFPJ2KwCyZKEIlYjkqgHu65FuiVrWvu/THW1u5DBEUtRExiHbcR/3luYkvK0OFU2Djt0U7bsDT85i6+EPOAhgucWmPXP41fEM2Cj8eWByRUBdwxfNAq5JVnUde4iFb+l5Lx4CQufAvQJ4nhHqY+rKBOHlHj2pe4XaOyhECaYYeFjxGJAK83yYDZ34sjZaw9xn5twV1P2FUDjRx0LeOHDMlw0hMEzzNdPkkwNI1dM=
+  app: test-restoration-auth
+  on:
+    repo: BeguinMattis/Test-restoration-authentication
+    branch: dev
